@@ -18,6 +18,10 @@ function initializeThumbnails() {
     thumbnailsContainer.innerHTML = '';
     
     for (let i = 1; i <= totalPages; i++) {
+        if(i==6){
+            continue;
+        }
+
         const thumbnail = document.createElement('div');
         thumbnail.className = `thumbnail ${i === 1 ? 'active' : ''}`;
         thumbnail.onclick = () => goToPage(i);
@@ -40,6 +44,10 @@ function initializePageGrid() {
     gridContainer.innerHTML = '';
     
     for (let i = 1; i <= totalPages; i++) {
+        if(i==6){
+            continue;
+        }
+
         const gridItem = document.createElement('div');
         gridItem.className = 'grid-item';
         gridItem.onclick = () => openModal(`assets/pages/page${i}.jpg`, `Page ${i}`);
@@ -68,6 +76,9 @@ function initializePageGrid() {
 function nextPage() {
     if (currentPage < totalPages) {
         currentPage++;
+        if(currentPage==6){
+            currentPage++;
+        }
         updatePageDisplay();
     }
 }
@@ -75,6 +86,9 @@ function nextPage() {
 function previousPage() {
     if (currentPage > 1) {
         currentPage--;
+        if(currentPage==6){
+            currentPage--;
+        }
         updatePageDisplay();
     }
 }
