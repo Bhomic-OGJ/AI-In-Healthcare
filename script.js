@@ -182,7 +182,7 @@ document.getElementById('fullscreenModal').addEventListener('click', function(e)
 function downloadPDF() {
     // Create a link element for download
     const link = document.createElement('a');
-    link.href = 'assets/Brochure_Application of Artificial Intelligence in Health Sciences (1).pdf';
+    link.href = 'assets/Brochure_Application of Artificial Intelligence in Health Sciences.pdf';
     link.download = 'brochure.pdf';
     
     // If PDF doesn't exist, show a message

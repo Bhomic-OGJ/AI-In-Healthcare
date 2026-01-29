@@ -38,7 +38,7 @@ except ImportError:
     import fitz
 
 # Convert the brochure PDF
-pdf_path = "assets/Brochure_Application of Artificial Intelligence in Health Sciences (1).pdf"
+pdf_path = "assets/Brochure_Application of Artificial Intelligence in Health Sciences.pdf"
 output_folder = "assets/pages"
 
 if os.path.exists(pdf_path):
